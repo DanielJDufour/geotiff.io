@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "less": "lessc public/less/style.less public/css/style.css",
+    "test-gui": "cd test && behave --no-capture",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
