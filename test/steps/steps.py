@@ -92,6 +92,7 @@ def type_text_in_window(context, text, window_name):
     type_text(text, window_name=window_name)
 
 @when(u'wait {number_of_seconds} seconds')
+@then(u'wait {number_of_seconds} seconds')
 @notify
 def wait_number_of_seconds(context, number_of_seconds):
     sleep(int(number_of_seconds))

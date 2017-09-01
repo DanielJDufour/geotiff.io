@@ -1,0 +1,12 @@
+language: python
+
+python:
+    - "2.7"
+    - "3.5"
+    - "3.5.1"
+
+notifications:
+    email:
+        - daniel.j.dufour@gmail.com
+
+script: npm run test-gui

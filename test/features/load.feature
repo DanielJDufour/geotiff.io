@@ -8,9 +8,10 @@ Feature: load
           And wait 1 second
           And type "16923917253.tif" in "Open File" window
           And press enter in "Open File" window
+          And wait 30 seconds
           And press backspace in "Open File" window {10} times
           And click "16923917253.tif" in "Open File" window
           And click "Open" in "Open File" window
-          And click "Go"
+          And click "GO"
           And wait 30 seconds
-         Then nothing
+         Then raster appears
