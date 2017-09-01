@@ -8,6 +8,9 @@ notifications:
         - daniel.j.dufour@gmail.com
 
 before_install:
+    - sudo add-apt-repository ppa:mc3man/trusty-media
+    - sudo apt-get update
+    - sudo apt-get dist-upgrade
     - sudo apt-get install -y ffmpeg gnome-screenshot recordmydesktop python-opencv tesseract-ocr xdotool
 
 script:
