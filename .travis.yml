@@ -2,11 +2,13 @@ language: python
 
 python:
     - "2.7"
-    - "3.5"
-    - "3.5.1"
 
 notifications:
     email:
         - daniel.j.dufour@gmail.com
 
-script: npm run test-gui
+before_install:
+    - sudo apt-get install -y ffmpeg gnome-screenshot recordmydesktop python-opencv tesseract-ocr xdotool
+
+script:
+    - npm run test-gui

@@ -1,0 +1,5 @@
+behave
+beryl
+editdistance
+Pillow
+pytesseract
