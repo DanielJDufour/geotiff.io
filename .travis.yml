@@ -10,6 +10,7 @@ notifications:
         - daniel.j.dufour@gmail.com
 
 before_install:
+  - echo $PWD
   - ls -alsh
   - sudo apt-get -qq update
   - sudo apt-get -y install gnome-screenshot recordmydesktop python-opencv tesseract-ocr xdotool
