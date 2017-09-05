@@ -10,8 +10,8 @@ notifications:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get -y install gnome-screenshot recordmydesktop python-opencv tesseract-ocr xdotool
-  - sudo apt-get -y install autoconf automake build-essential libass-dev libfreetype6-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev pkg-config texinfo wget zlib1g-dev
-  - sudo apt-get -y install yasm nasm libmp3lame-dev
+  - sudo apt-get -y install autoconf automake build-essential cmake libass-dev libavcodec-dev libavformat-dev libfreetype6-dev libgtk2.0-dev libmp3lame-dev libswscale-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev nasm pkg-config texinfo yasm wget zlib1g-dev
+  - sudo apt-get -y install   
   - mkdir ~/ffmpeg_sources
   - cd ~/ffmpeg_sources
   - wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
@@ -22,6 +22,14 @@ before_install:
   - make install
   - hash -r
   - cd $TRAVIS_BUILD_DIR
+  - cd ~/
+  - git clone https://github.com/opencv/opencv.git
+  - cd ~/opencv
+  - mkdir release
+  - cd release
+  - cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+  - make
+  - sudo make install
 
 script:
     - npm run test-gui
