@@ -1,3 +1,5 @@
+dist: trusty
+
 language: python
 
 python:
@@ -8,6 +10,7 @@ notifications:
         - daniel.j.dufour@gmail.com
 
 before_install:
+  - ls -alsh
   - sudo apt-get -qq update
   - sudo apt-get -y install gnome-screenshot recordmydesktop python-opencv tesseract-ocr xdotool
   - sudo apt-get -y install autoconf automake build-essential cmake libass-dev libavcodec-dev libavformat-dev libfreetype6-dev libgtk2.0-dev libmp3lame-dev libswscale-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev nasm pkg-config texinfo yasm wget zlib1g-dev
@@ -34,3 +37,6 @@ before_install:
 
 script:
     - npm run test-gui
+    
+sudo:
+    - required
