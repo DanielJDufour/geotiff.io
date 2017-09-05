@@ -30,6 +30,7 @@ before_install:
   - cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
   - make
   - sudo make install
+  - cd ~/DanielJDufour/geotiff.io
 
 script:
     - npm run test-gui
