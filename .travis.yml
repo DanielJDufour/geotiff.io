@@ -10,6 +10,7 @@ notifications:
         - daniel.j.dufour@gmail.com
 
 before_install:
+    - sudo apt-get install ffmpeg gnome-screenshot notify-osd recordmydesktop python-opencv tesseract-ocr xdotool
     - git clone https://github.com/DanielJDufour/beryl
     - pip install -e beryl/
 
