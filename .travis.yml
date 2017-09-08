@@ -9,6 +9,10 @@ notifications:
     email:
         - daniel.j.dufour@gmail.com
 
+before_install:
+    - git clone https://github.com/DanielJDufour/beryl
+    - pip install -e beryl/
+
 script:
     - npm run test-gui
     
