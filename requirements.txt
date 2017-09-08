@@ -1,6 +1,8 @@
 behave
 beryl
 editdistance
+numpy
 opencv-python
 Pillow
 pytesseract
+scipy
