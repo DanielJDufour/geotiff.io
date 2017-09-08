@@ -7,3 +7,4 @@ Pillow
 pytesseract
 pyvirtualdisplay
 scipy
+selenium
