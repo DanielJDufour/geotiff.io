@@ -10,7 +10,7 @@ notifications:
         - daniel.j.dufour@gmail.com
 
 before_install:
-    - sudo apt-get install gnome-screenshot notify-osd recordmydesktop python-opencv tesseract-ocr xdotool
+    - sudo apt-get install gnome-screenshot libnotify-bin notify-osd recordmydesktop python-opencv tesseract-ocr xdotool
     - git clone https://github.com/DanielJDufour/beryl
     - pip install -e beryl/
 
