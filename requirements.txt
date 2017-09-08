@@ -5,4 +5,5 @@ numpy
 opencv-python
 Pillow
 pytesseract
+pyvirtualdisplay
 scipy
