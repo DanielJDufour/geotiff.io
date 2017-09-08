@@ -1,5 +1,6 @@
 behave
 beryl
 editdistance
+opencv-python
 Pillow
 pytesseract
