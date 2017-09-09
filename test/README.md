@@ -5,6 +5,7 @@ Here's the requirements that need to be installed for testing
 | apt-package | purpose |
 | ----------- | ------- |
 | fonts-liberation | req'd by Google Chrome |
+| fluxbox | req'd by beryl to manage windows on server |
 | gconf-service | req'd by Google Chrome |
 | gnome-screenshot | used by beryl |
 | libgconf-2-4 | req'd by Google Chrome |
