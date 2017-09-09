@@ -1,5 +1,6 @@
 behave
 beryl
+chromedriver_installer
 editdistance
 numpy
 opencv-python
