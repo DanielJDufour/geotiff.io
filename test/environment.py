@@ -19,7 +19,6 @@ def before_all(context):
 
     call( [ "killall", "-9", "chrome" ] )
     options = Options()
-    options.add_extension(path_to_chrome_extension)
     #options.add_argument("--remote-debugging-port=9222")
     options.add_argument("--start-maximized")
     context.driver = webdriver.Chrome(executable_path=path_to_chrome_driver, chrome_options=options)
