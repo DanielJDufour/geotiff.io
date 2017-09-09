@@ -9,6 +9,7 @@ It's too much of a pain to view and manipulate raster data.  The aim of this pro
 - Identify Pixel Value
 
 # Features Coming Soon
+- Calculate Average of Values of Cells in Area
 - Draw Polygon
 - Upload Polygon
 - Sum Pixels inside Area
@@ -25,4 +26,4 @@ GeoTIFF.io runs all the tools and processes in your own browser.  This means tha
 GeoTIFF.io is just a website, that's it.  It's just a collection of your standard HTML, CSS and JavaScript files.  Unlike ArcMap and QGIS, no install is required.  Just point your browser to https://geotiff.io. 
 
 ## Contribute
-Feature requests, issues, and pull requests are most welcome!
+Feature requests, issues, and pull requests are most welcome!  To learn more go to our [Contributing Page](https://github.com/GeoTIFF/geotiff.io/blob/master/Contributing.md).

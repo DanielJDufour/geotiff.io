@@ -10,6 +10,7 @@ let tool_info = fetch('data/tools.txt').then(response => {
 	return new Promise(resolve => {
 		response.text().then(str => {
 			let tools = str.split('\n')
+                                .filter(Boolean) // filter out blank lines
 				.map(tool => tool.split('|'));
 
 			tools.forEach(tool => components[tool[2]] = require(`./tools/${tool[2]}`));
