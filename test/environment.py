@@ -21,7 +21,7 @@ def before_all(context):
     options = Options()
     #options.add_argument("--remote-debugging-port=9222")
     options.add_argument("--start-maximized")
-    context.driver = webdriver.Chrome(executable_path=path_to_chrome_driver, chrome_options=options)
+    context.driver = webdriver.Chrome(chrome_options=options)
     #context.driver.get("about:blank")
 
 @notify
