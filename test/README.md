@@ -12,6 +12,7 @@ Here's the requirements that need to be installed for testing
 | notify-osd | used by beryl |
 | python-opencv | used by beryl |
 | tesseract-ocr | used by beryl |
+| wmctrl | used by beryl to grab windows |
 | recordmydesktop | used by beryl |
 | xdg-utils | req'd by Google Chrome |
 | xdotool | used by beryl |
