@@ -7,5 +7,6 @@ opencv-python
 Pillow
 pytesseract
 pyvirtualdisplay
+scandir
 scipy
 selenium
