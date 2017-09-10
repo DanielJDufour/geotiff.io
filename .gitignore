@@ -60,3 +60,6 @@ typings/
 
 # swap files
 *swp
+
+# compiled python files
+*pyc

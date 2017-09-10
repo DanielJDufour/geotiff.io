@@ -1,4 +1,5 @@
 from behave import *
+from beryl.contrib.geo.steps import *
 from beryl import click, activate_window, is_text_on_screen, notify, press_backspace, press_enter, type_text
 from itertools import izip
 from PIL import Image

@@ -1,3 +1,5 @@
+dist: trusty
+
 language: python
 
 python:
@@ -8,10 +10,18 @@ notifications:
         - daniel.j.dufour@gmail.com
 
 before_install:
-    - sudo add-apt-repository ppa:mc3man/trusty-media
-    - sudo apt-get update
-    - sudo apt-get dist-upgrade
-    - sudo apt-get install -y ffmpeg gnome-screenshot recordmydesktop python-opencv tesseract-ocr xdotool
+    - sudo apt-get install gnome-screenshot libnotify-bin notify-osd recordmydesktop python-opencv tesseract-ocr xdotool
+    - sudo apt-get install libxss1 libappindicator1 libindicator7
+    - echo 'installing reqs for Goolge Chrome'
+    - sudo apt-get install fonts-liberation gconf2-common gconf-service gconf-service-backend libgconf-2-4 xdg-utils 
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - sudo dpkg -i google-chrome*.deb
+    - echo 'installing chromedriver'
+    - git clone https://github.com/DanielJDufour/beryl
+    - pip install -e beryl/
 
 script:
     - npm run test-gui
+    
+sudo:
+    - required
