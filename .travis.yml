@@ -19,8 +19,9 @@ before_install:
     - echo 'building libleptonica required by Tesseract'
     - git clone https://github.com/DanBloomberg/leptonica
     - cd leptonica
-    - mkdir build
+    - ./autobuild
     - cd build
+    - LDFLAGS="-Wl,-rpath -Wl,/usr/local/lib" ./configure
     - cmake .. -DBUILD_PROG=1
     - make
     - sudo make install
