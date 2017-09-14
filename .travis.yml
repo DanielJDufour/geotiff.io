@@ -14,6 +14,8 @@ before_install:
     - sudo apt-get install libxss1 libappindicator1 libindicator7
     - echo 'installing reqs for tesseract'
     - sudo apt-get install autoconf autoconf-archive automake g++ libjpeg8-dev libpng12-dev libtiff5-dev libtool pkg-config zlib1g-dev
+    - echo 'installing reqs for tesseract training'
+    - sudo apt-get install libicu-dev libpango1.0-dev libcairo2-dev
     - echo 'installing reqs for Goolge Chrome'
     - sudo apt-get install fonts-liberation gconf2-common gconf-service gconf-service-backend libgconf-2-4 xdg-utils 
     - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
