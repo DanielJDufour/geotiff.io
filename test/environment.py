@@ -1,6 +1,7 @@
 #environment.py
 
 from beryl import click, notify
+from beryl import recorder
 from host import Localhost
 from os import environ
 from os.path import abspath, dirname
@@ -30,6 +31,9 @@ def before_all(context):
         Popen("fluxbox")
         print("started window manager")
 
+    context.path_to_recording = "/tmp/beryl_recording.ogv"
+    #context.recording = recorder.start(context.path_to_recording)
+
     context.localhost = Localhost()
     context.localhost.start()
     print("starting localhost server")
@@ -46,6 +50,11 @@ def before_all(context):
 def after_all(context):
     context.localhost.end()
     context.driver.quit()
+
+    if hasattr(context, "recording"):
+        context.recording.terminate()
+        print("saved recording to " + context.path_to_recording)
+
     if hasattr(context, "display"):
         context.display.stop()
 

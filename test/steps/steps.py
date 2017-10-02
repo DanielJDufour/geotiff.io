@@ -1,4 +1,5 @@
 from behave import *
+from beryl.steps import *
 from beryl.contrib.geo.steps import *
 from beryl.contrib.web.steps import *
 from beryl import click, activate_window, is_text_on_screen, notify, press_backspace, press_enter, type_text
@@ -52,20 +53,7 @@ def do_nothing(context):
 #@when("install the extension")
 #def install_extension(context):
 
-@when("you click {text}")
-@when('click "{text}"')
-@notify
-def click_text(context, text):
-    print("starting click_text with: " + text)
-    click(text, webdriver=context.driver, debug=True)
 
-@when("you click {text}")
-@when('click "{text}" in "{window_name}" window')
-@notify
-def click_text_in_window(context, text, window_name):
-    print("starting click_text_in_window with: " + text + " and " + window_name)
-    activate_window(window_name=window_name)
-    click(text, webdriver=context.driver, window_name=window_name)
 
 @when(u'type "{text}"')
 @notify
