@@ -1,3 +1,4 @@
+import OfflinePluginRuntime from 'offline-plugin/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
@@ -10,6 +11,8 @@ import UrlService from './services/UrlService';
 import ToolListService from './services/ToolListService';
 import Map from './Map';
 import '../styles/style.less';
+
+OfflinePluginRuntime.install();
 
 const store = buildStore();
 store.dispatch(loadTools());
