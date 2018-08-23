@@ -52,7 +52,7 @@ const ModalComponent = ({
       >
         GO
       </button>
-      <p>Log feature requests and issues <a href="https://github.com/danieljdufour/geotiff.io/issues">here</a>.</p>
+      <p>Log feature requests and issues <a href="https://github.com/GeoTIFF/geotiff.io/issues">here</a>.</p>
     </section>
   </Modal>
 );

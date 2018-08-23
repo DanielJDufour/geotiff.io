@@ -45,11 +45,12 @@
     "webpack-merge": "^4.1.3"
   },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "./node_modules/webpack/bin/webpack.js --config webpack.prod.js",
     "compile-linked": "cd ~/geotiff.js && npm run build && cd ~/georaster && npm run babel && cd ~/georaster-layer-for-leaflet && npm run babel && cd ~/geoblaze && npm run babel && npm run build && cd ~/geotiff.io && npm run less",
     "debug-chain": "npm run compile-linked && npm run start",
     "debug-docs": "npm run link-repos && npm run compile-linked && npm run build && cd docs && http-server",
     "link-repos": "npm link ~/geoblaze && cd ~/geoblaze && npm link ~/georaster && npm link ~/georaster-layer-for-leaflet",
-    "start": "webpack-dev-server --config webpack.dev.js"
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.js",
+    "start-on-server": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.js --host 0.0.0.0"
   }
 }
