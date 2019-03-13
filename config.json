@@ -21,6 +21,7 @@
     "histogram",
     "identify",
     "load",
+    "load-geojson",
     "max",
     "mean",
     "median",
